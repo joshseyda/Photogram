@@ -2,10 +2,10 @@ require 'rails_helper.rb'
 
 feature 'Can view individual posts' do
   scenario 'Can click and view a single post' do
-    post_one = create(:post)
+    post= create(:post)
 
     visit '/'
     find(:xpath, "//a[contains(@href,'posts/1')]").click
-    expect(page.current_path).to eq(post_path(post_one))
+    expect(page.current_path).to eq(post_path(post))
   end
 end
