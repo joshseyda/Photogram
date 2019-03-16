@@ -1,2 +1,10 @@
 <h1>Photogram</h1>
+<%= @posts.each do |post|%>
+<div>
+  <%= link_to(post) do %>
+    <%= image_tag(post.image.url(:medium))%>
+    <p><%= post.caption %></p>
+  <% end %>
+</div>
+<% end %>
 <%= link_to "New Post", new_post_path %>
