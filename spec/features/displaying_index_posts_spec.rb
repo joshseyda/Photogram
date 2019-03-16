@@ -3,7 +3,7 @@ require 'rails_helper.rb'
 feature 'displaying index posts' do
   scenario 'the index displays correct created post information' do
     post_one = create(:post, caption: "This is post one")
-    post_two = create(:post, caption: "this is post two")
+    post_two = create(:post, caption: "This is post two")
 
     visit '/'
     expect(page).to have_content("This is post one")
